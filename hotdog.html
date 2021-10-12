@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="styles.css" />
+        <title>Joe's Hotdogs</title>
+</head>
+<body>
+    <h1>Joe's Hotdogs</h1>
+    <h2>Price:</h2>
+    <p>Hotdogs: $3.75</p>
+    <br/>
+    <p>French Fries: $2.00</p>
+    <br/>
+    <p>Drinks: $1.50</p>
+    <br/>
+
+
+<button onclick="order()">Order</button> <br/>
+
+<p id = "order"></p>
+<p id = "items"><b>Items Ordered: </b></p>
+
+<div class = "column">
+  <p id = "title"></p>
+  <p id = "hotdog"></p>
+  <p id = "fries"></p>
+  <p id = "drinks"> </p>
+</div>
+
+<div class = "column2">
+  <p id = "subtotal"></p>
+  <p id = "discounts"></p>
+  <p id = "taxadded"></p>
+  <p id = "overall"></p>
+</div>
+
+
+<script language = "javascript">
+  var hotdog = document.getElementById("hotdog");
+
+  function order(){
+    var hotdogNum = prompt("How Many Hotdogs Do You Want?", "");
+    var friesNum = prompt("How Many French Fries Do You Want?", "");
+    var drinksNum = prompt("How Many Drinks Do You Want?", "");
+    var price = (hotdogNum * 3.75 + friesNum * 2 + drinksNum * 1.5) ;
+    var discount = 0;
+  
+    if (price >= 20){
+      price = price * 0.9;
+      discount = price * 0.1;
+    } 
+
+    var tax = price * 0.0625;
+    var overallprice = (price + tax).toFixed(2);
+
+    title.innerHTML = title.innerHTML + "Quantities:"
+    hotdog.innerHTML = hotdog.innerHTML + hotdogNum + " hotdogs";
+    fries.innerHTML = fries.innerHTML + friesNum + " fries";
+    drinks.innerHTML = drinks.innerHTML + drinksNum + " drinks";
+    subtotal.innerHTML = subtotal.innerHTML + "Subtotal: " + price.toFixed(2);
+    discounts.innerHTML = discounts.innerHTML + "Discount: " + discount.toFixed(2);
+    taxadded.innerHTML = taxadded.innerHTML + "Tax: " + tax.toFixed(2);
+    overall.innerHTML = overall.innerHTML + "Total: " + overallprice;
+
+  }
+ 
+
+
+</script>
+
+
+</body>
+</html>

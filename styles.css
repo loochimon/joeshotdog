@@ -1,0 +1,36 @@
+
+h1, h2 {
+  padding-left:100px;
+  font-family: avenir;
+}
+
+p {
+  padding-left: 100px;
+  font-family: avenir;
+}
+
+button{
+ font-family: avenir;
+ margin-left: 100px;
+ margin-bottom: 20px;
+}
+
+* {
+    box-sizing: border-box;
+}
+  
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+
+.column2 {
+    float: right;
+    width: 50%;
+    padding: 10px;
+}
+
+
+
+
